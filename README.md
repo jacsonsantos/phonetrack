@@ -50,3 +50,31 @@ Use o seguinte comando no Terminal (Linux ou MacOS) ou CMD (Windows), para poder
 ```txt
 git clone https://github.com/jacsonsantos/phonetrack.git
 ```
+
+Entre no diretorio do projeto de você acabou de baixar.
+
+```txt
+cd phonetrack
+```
+
+Agora vamos instalar nossa aplicacao
+
+```txt
+php composer.phar install
+```
+
+Para que nossa aplicação funcione perfeitamente precisaremos fazer uma pequena configuração em nosso arquivo **config.json**.
+
+Renomei ou Copie o arquivo **config.example.json** para apenas **config.json**.
+
+```txt
+cp config.example.json config.json
+```
+
+### Sobre o Config.json
+
+Este arquivo contém toda a informação necessaria para que nossa aplicação funcione.
+
+| nome | descrião |
+|------|--------|  
+|app_name|Nome da Aplicação|
