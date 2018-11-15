@@ -11,34 +11,43 @@ function next(obj) {
 function getToken() {
     return $('meta[name="_token"]').attr('content');
 }
-
+// Load Cliente
 function loadCliente(token) {
-    $.post(URLBASE +'done',{ token:token}, function (result) {
-        console.log(result);
+    $.post(URLBASE +'done',{ token:token}, function (cliente) {
+        $('#nome_completo').text(cliente.nome_completo);
+        $('#data_nascimento').text(cliente.data_nascimento);
+        $('#rua').text(cliente.rua);
+        $('#numero').text(cliente.numero);
+        $('#cep').text(cliente.cep);
+        $('#cidade').text(cliente.cidade);
+        $('#estado').text(cliente.estado);
+        $('#telefone_fixo').text(cliente.telefone_fixo);
+        $('#telefone_celular').text(cliente.telefone_celular);
     })
 }
-
-$(function (e) {
-    //Mask INPUT
+// Mask INPUT's
+function mask_input() {
     $('.date').mask('00/00/0000');
     $('.cep').mask('00000-000');
     $('.tel-cel').mask('(00) 00000-0000');
     $('.tel-fixo').mask('(00) 0000-0000');
-
+}
+// Bootstrap
+$(function (e) {
+    //Mask INPUT
+    mask_input();
     // Start Create
     $('.start').on('click', function (e) {
         next($(this));
-    })
-
+    });
     // Next Step
     $('.next').on('click', function (e) {
         $this = $(this);
         //Save data
         $this.closest('.next-form').submit();
-    })
-
-    // Next Step
-    $('.next-form').on('submit', function (e) {
+    });
+    // Save Step
+    $('.next-form').on('submit', function(e) {
         $form = $(this);
         $btn  = $form.find('.next');
 
@@ -69,10 +78,9 @@ $(function (e) {
         });
 
         e.preventDefault();
-    })
-
+    });
     // Back Step
-    $('.previus').on('click', function (e) {
+    $('.previus').on('click', function(e) {
         $this = $(this);
 
         $box  = $this.closest('.box');
@@ -84,14 +92,14 @@ $(function (e) {
         $previus.show();
 
         return true;
-    })
-    
-    $('.done').on('click', function (e) {
+    });
+    // Done
+    $('.done').on('click', function(e) {
         $('#step-4').removeClass('step');
         loadCliente(getToken());
-    })
+    });
     // Close
     $('.close').on('click', function (e) {
         window.location.href = '/';
     })
-})
+});
