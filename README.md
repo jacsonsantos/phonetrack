@@ -78,3 +78,8 @@ Este arquivo contém toda a informação necessaria para que nossa aplicação f
 | nome | descrião |
 |------|--------|  
 |app_name|Nome da Aplicação|
+|versao|Versão da Aplicação|
+|url_base| URL base da Aplicação|
+|debug| Habilita o Debug da Aplicação|
+|database| Informações do seu Banco de dados|
+
