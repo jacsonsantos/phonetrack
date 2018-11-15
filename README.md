@@ -57,7 +57,7 @@ Entre no diretorio do projeto de você acabou de baixar.
 cd phonetrack
 ```
 
-Agora vamos instalar nossa aplicacao
+Agora vamos instalar nossa aplicacão
 
 ```txt
 php composer.phar install
@@ -65,7 +65,7 @@ php composer.phar install
 
 Para que nossa aplicação funcione perfeitamente precisaremos fazer uma pequena configuração em nosso arquivo **config.json**.
 
-Renomei ou Copie o arquivo **config.example.json** para apenas **config.json**.
+Renomei ou Copie o arquivo **[config.example.json](config.example.json)** para apenas **config.json**.
 
 ```txt
 cp config.example.json config.json
@@ -100,3 +100,18 @@ O arquivo **config.json** já vem pré configurado, informe apenas as informaç�
     }
 }
 ```
+
+## Banco de Dados
+
+Execute o script SQL [dump.sql](dump.sql) para criar o banco da aplicação e suas tabelas.
+
+## Iniciando Aplicação
+
+Se você fez todos os passos anteriores corretamente, já podemos inciar nossa aplicação.
+Para iniciar a aplicação execute o seguinte comando.
+
+```txt
+php -S localhost:4040 -t public
+```
+
+Acesse o seguinte endereço: [http://localhost:4040](http://localhost:4040)
