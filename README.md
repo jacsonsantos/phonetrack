@@ -115,3 +115,7 @@ php -S localhost:4040 -t public
 ```
 
 Acesse o seguinte endereço: [http://localhost:4040](http://localhost:4040)
+
+## Tela Inicial
+
+![Tela Inicial](tela_inicial.png)
