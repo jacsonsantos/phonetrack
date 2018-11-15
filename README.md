@@ -83,3 +83,20 @@ Este arquivo contém toda a informação necessaria para que nossa aplicação f
 |debug| Habilita o Debug da Aplicação|
 |database| Informações do seu Banco de dados|
 
+O arquivo **config.json** já vem pré configurado, informe apenas as informações de seu Banco de dados.
+
+```json
+{
+    "app_name":"Phone Track",
+    "versao":"v1",
+    "url_base":"http://127.0.0.1:4040/",
+    "debug": true,
+    "database": {
+        "driver":"mysql",
+        "host":"127.0.0.1",
+        "dbname":"phonetrack",
+        "username":"meuUsuario",
+        "password":"minhaSenha"
+    }
+}
+```
