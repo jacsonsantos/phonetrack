@@ -1,0 +1,179 @@
+<?= view('layouts.header') ?>
+
+<section class="container">
+    <div class="text-center box box-default">
+        <button class="btn btn-primary margin-top-350x _1P5x start" data-next="#step-1">Iniciar Cadastro</button>
+    </div>
+    <!-- STEP 1-->
+    <div class="step box box-default" id="step-1">
+        <div class="form-group">
+            <span class="close pull-right">x</span>
+        </div>
+        <div class="clear"></div>
+        <form action="" class="next-form">
+        <input type="hidden" name="step" value="1">
+        <div class="form-group">
+            <lebal class="control-label _1P2x" for="Nome Completo">Nome Completo</lebal>
+            <input type="text" class="form-control" name="nome_completo" placeholder="Informe seu Nome Completo aqui..." value="<?= $cliente->nome_completo ?>">
+            <span class="validate validate-danger">Error</span>
+        </div>
+        <div class="form-group">
+            <lebal class="control-label _1P2x" for="Data de Nascimento">Data de Nascimento</lebal>
+            <input type="text" class="form-control date" name="data_nascimento" placeholder="Informe sua Data de Nascimento aqui..."  value="<?= dateFormat('d/m/Y',$cliente->data_nascimento, 'Y-m-d') ?>">
+            <span class="validate validate-danger">Error</span>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary pull-right next" data-next="#step-2">Próximo</button>
+        </div>
+        </form>
+    </div>
+    <!-- STEP 2-->
+    <div class="step box box-default" id="step-2">
+        <div class="form-group">
+            <span class="close pull-right">x</span>
+        </div>
+        <div class="clear"></div>
+        <form action="" class="next-form">
+        <input type="hidden" name="step" value="2">
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Rua">Rua</lebal>
+                    <input type="text" class="form-control" name="rua" placeholder="Informe sua Rua aqui..." value="<?= $cliente->rua ?>">
+                    <span class="validate validate-danger">Error</span>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Número">Número</lebal>
+                    <input type="text" class="form-control" name="numero" placeholder="Informe seu Número aqui..." value="<?= $cliente->numero ?>">
+                    <span class="validate validate-danger">Error</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="CEP">CEP</lebal>
+                    <input type="text" class="form-control cep" name="cep" placeholder="Informe seu CEP aqui..." value="<?= $cliente->cep ?>">
+                    <span class="validate validate-danger">Error</span>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Cidade">Cidade</lebal>
+                    <input type="text" class="form-control" name="cidade" placeholder="Informe sua Cidade aqui..." value="<?= $cliente->cidade ?>">
+                    <span class="validate validate-danger">Error</span>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Estado">Estado</lebal>
+                    <input type="text" class="form-control" name="estado" placeholder="Informe seu Estado aqui..." value="<?= $cliente->estado ?>">
+                    <span class="validate validate-danger">Error</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-clear previus" data-previus="#step-1">Anterior</button>
+            <button type="button" class="btn btn-primary pull-right next" data-next="#step-3">Próximo</button>
+        </div>
+        </form>
+    </div>
+    <!-- STEP 3-->
+    <div class="step box box-default" id="step-3">
+        <div class="form-group">
+            <span class="close pull-right">x</span>
+        </div>
+        <div class="clear"></div>
+        <form action="" class="next-form">
+            <input type="hidden" name="step" value="3">
+            <div class="form-group">
+                <lebal class="control-label _1P2x" for="Telefone Fixo">Telefone Fixo</lebal>
+                <input type="tel" class="form-control tel-fixo" name="telefone_fixo" placeholder="Informe seu Telefone Fixo aqui...">
+                <span class="validate validate-danger">Error</span>
+            </div>
+            <div class="form-group">
+                <lebal class="control-label _1P2x" for="Telefone Celular">Telefone Celular</lebal>
+                <input type="tel" class="form-control tel-cel" name="telefone_celular" placeholder="Informe seu Telefone Celular aqui...">
+                <span class="validate validate-danger">Error</span>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-clear previus" data-previus="#step-2">Anterior</button>
+                <button type="button" class="btn btn-primary pull-right next done">Concluir</button>
+            </div>
+            <div class="clear"></div>
+        </form>
+    </div>
+    <!-- SUCCESS -->
+    <div class="step box box-default" id="step-4">
+        <h1 class="text-uppercase">Cadastro Finalizado!</h1>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Nome Completo">Nome Completo</lebal>
+                    <div class="field" id="nome_completo">&nbsp;</div>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Data de Nascimento">Data de Nascimento</lebal>
+                    <div class="field" id="data_nascimento">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Rua">Rua</lebal>
+                    <div class="field" id="rua">&nbsp;</div>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Número">Número</lebal>
+                    <div class="field" id="numero">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="CEP">CEP</lebal>
+                    <div class="field" id="cep">&nbsp;</div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Cidade">Cidade</lebal>
+                    <div class="field" id="cidade">&nbsp;</div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Estado">Estado</lebal>
+                    <div class="field" id="estado">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Telefone Fixo">Telefone Fixo</lebal>
+                    <div class="field" id="telefone_fixo">&nbsp;</div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="form-group">
+                    <lebal class="control-label _1P2x" for="Telefone Celular">Telefone Celular</lebal>
+                    <div class="field" id="telefone_celular">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center margin-top-50x">
+            <button class="btn btn-primary _1P5x close">Novo Cadastro</button>
+        </div>
+    </div>
+</section>
+
+<?= view('layouts.footer') ?>

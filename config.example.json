@@ -1,0 +1,13 @@
+{
+    "app_name":"Phone Track",
+    "versao":"v1",
+    "url_base":"http://127.0.0.1:4040/",
+    "debug": true,
+    "database": {
+        "driver":"mysql",
+        "host":"",
+        "dbname":"",
+        "username":"",
+        "password":""
+    }
+}

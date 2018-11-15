@@ -1,0 +1,192 @@
+/**
+* Test Phone Track
+*@author Jacson Santos
+*/
+
+/** BOOT*/
+*{margin: 0;padding: 0;font-family: 'Roboto', sans-serif;}
+small{
+    font-size: 1rem;
+    color: #cccccc;
+}
+h1,h2,h3,h4,h5,h6{
+    padding: 15px;
+}
+input{
+    border: 0;
+    border-bottom: 1px solid #9d9d9d;
+    background: transparent;
+    font-size: 2rem;
+    color: #0f0f0f;
+    text-transform: uppercase;
+}
+input:focus{
+    outline: none;
+}
+input[placeholder]{
+    color: #c7c7c7;
+}
+/** HELPERS*/
+.field{
+    border: 0;
+    border-bottom: 1px solid #9d9d9d;
+    font-size: 2rem;
+    color: #0f0f0f;
+    text-transform: uppercase;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-center{
+    text-align: center;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.form-group{
+    display: block;
+    padding: 15px;
+}
+.control-label{
+    display: block;
+    padding: 10px 0;
+    color: #0f0f0f;
+    text-transform: uppercase;
+}
+.validate{
+    display: block;
+    padding-top: 5px;
+    color: #0f0f0f;
+}
+.validate-danger{
+    color: #ee4a48;
+}
+.form-control{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.box-default{
+    position: relative;
+    height: 800px;
+}
+.margin-top-50x{
+    margin-top: 50px;
+}
+.margin-top-150x{
+    margin-top: 150px;
+}
+.margin-top-250x{
+    margin-top: 250px;
+}
+.margin-top-350x{
+    margin-top: 350px;
+}
+.step{
+    display: none;
+}
+.clear{
+    clear: both;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.close{
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: #ededed;
+    cursor: pointer;
+}
+.close:hover{
+    color: #0f0f0f;
+}
+.close:after{
+    clear: both;
+}
+/** FONT SIZE*/
+._1x{
+    font-size: 1rem;
+}
+._1P2x{
+    font-size: 1.2rem;
+}
+._1P5x{
+    font-size: 1.5rem;
+}
+._2x{
+    font-size: 2rem;
+ }
+._3x{
+    font-size: 3rem;
+}
+/** BUTTONS*/
+.btn{
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btn-primary{
+    background-color: #3700B3;
+    color: #fff;
+}
+.btn-primary:hover{
+    background-color: #fff;
+    color: #3700B3;
+    border: 2px solid #3700B3;
+}
+.btn-clear{
+    background-color: #fff;
+    color: #3700B3;
+    border: 2px solid #3700B3;
+
+}
+.btn-clear:hover{
+    background-color: #3700B3;
+    color: #fff;
+}
+/** GRID*/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-1{
+    flex: 1;
+}
+.col-2{
+    flex: 2;
+}
+.col-3{
+    flex: 3;
+}
+/** HEADER*/
+.panel-heading{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 1px 1px 3px #ebebeb;
+}
+.logo{
+    margin-left: 25px;
+    font-size: 1.2rem;
+}
+.logo > a{
+    text-decoration: none;
+}
+.logo > a.default-logo{
+    background-color: #fff;
+    color: #4e4e4e;
+}
+/** FOOTER*/
+.panel-footer{
+    background-color: #ededed;
+    color: #0f0f0f;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
