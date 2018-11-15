@@ -27,6 +27,9 @@ input[placeholder]{
     color: #c7c7c7;
 }
 /** HELPERS*/
+.hide{
+    display: none;
+}
 .field{
     border: 0;
     border-bottom: 1px solid #9d9d9d;
@@ -54,12 +57,9 @@ input[placeholder]{
     color: #0f0f0f;
     text-transform: uppercase;
 }
-.validate{
+.error{
     display: block;
     padding-top: 5px;
-    color: #0f0f0f;
-}
-.validate-danger{
     color: #ee4a48;
 }
 .form-control{

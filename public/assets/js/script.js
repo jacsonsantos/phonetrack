@@ -32,6 +32,41 @@ function mask_input() {
     $('.tel-cel').mask('(00) 00000-0000');
     $('.tel-fixo').mask('(00) 0000-0000');
 }
+// Validator
+function validator(form) {
+    return form.validate({
+        rules: {
+            nome_completo: "required",
+            data_nascimento: {
+                required: true,
+                minlength:10,
+                date: true
+            },
+            rua: "required",
+            numero: "required",
+            cep: "required",
+            cidade: "required",
+            estado: "required",
+            telefone_fixo: "required",
+            telefone_celular: "required"
+        },
+        messages: {
+            nome_completo: "Informe seu Nome Completo",
+            data_nascimento: {
+                required: "Informe sua Data de Nascimento",
+                minlength: "Data de Nascimento Inválida",
+                date: "Data de Nascimento Inválida"
+            },
+            rua: "Informe sua Rua",
+            numero: "Informe Numero da casa",
+            cep: "Informe seu CEP",
+            cidade: "Informe sua Cidade",
+            estado: "Informe seu Estado",
+            telefone_fixo: "Informe seu Telefone Fixo",
+            telefone_celular: "Informe seu Telefone Celular"
+        }
+    })
+}
 // Bootstrap
 $(function (e) {
     //Mask INPUT
@@ -43,8 +78,14 @@ $(function (e) {
     // Next Step
     $('.next').on('click', function (e) {
         $this = $(this);
-        //Save data
-        $this.closest('.next-form').submit();
+        //Get Form
+        $form = $this.closest('.next-form');
+        // Starting Validator
+        var validate = validator($form);
+        //Submit Form
+        if (validate.form()) {
+            $form.submit();
+        }
     });
     // Save Step
     $('.next-form').on('submit', function(e) {
@@ -74,6 +115,9 @@ $(function (e) {
                 $btn.text('Próximo');
                 $btn.removeAttr('disabled');
                 next($btn);
+                if($done = $form.find('.done')) {
+                    $done.trigger('click');
+                }
             }
         });
 
