@@ -5,9 +5,9 @@
     "debug": true,
     "database": {
         "driver":"mysql",
-        "host":"",
-        "dbname":"",
-        "username":"",
-        "password":""
+        "host":"127.0.0.1",
+        "dbname":"phonetrack",
+        "username":"meuUsuario",
+        "password":"minhaSenha"
     }
 }
