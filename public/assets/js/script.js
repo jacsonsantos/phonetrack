@@ -39,8 +39,7 @@ function validator(form) {
             nome_completo: "required",
             data_nascimento: {
                 required: true,
-                minlength:10,
-                date: true
+                minlength:10
             },
             rua: "required",
             numero: "required",
@@ -54,8 +53,7 @@ function validator(form) {
             nome_completo: "Informe seu Nome Completo",
             data_nascimento: {
                 required: "Informe sua Data de Nascimento",
-                minlength: "Data de Nascimento Inválida",
-                date: "Data de Nascimento Inválida"
+                minlength: "Data de Nascimento Inválida"
             },
             rua: "Informe sua Rua",
             numero: "Informe Numero da casa",
