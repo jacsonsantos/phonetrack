@@ -41,6 +41,11 @@ class IndexController
         $cliente->status = 1;
         $cliente->save();
 
-        return responseJson($cliente->all());
+        $data = $cliente->all();
+        if (isset($data['data_nascimento'])) {
+            $data['data_nascimento'] = dateFormat('d/m/Y', $data['data_nascimento'],'Y-m-d');
+        }
+
+        return responseJson($data);
     }
 }
