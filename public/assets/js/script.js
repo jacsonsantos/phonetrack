@@ -37,10 +37,7 @@ function validator(form) {
     return form.validate({
         rules: {
             nome_completo: "required",
-            data_nascimento: {
-                required: true,
-                minlength:10
-            },
+            data_nascimento: "required",
             rua: "required",
             numero: "required",
             cep: "required",
@@ -51,10 +48,7 @@ function validator(form) {
         },
         messages: {
             nome_completo: "Informe seu Nome Completo",
-            data_nascimento: {
-                required: "Informe sua Data de Nascimento",
-                minlength: "Data de Nascimento Inválida"
-            },
+            data_nascimento: "Informe sua Data de Nascimento",
             rua: "Informe sua Rua",
             numero: "Informe Numero da casa",
             cep: "Informe seu CEP",
